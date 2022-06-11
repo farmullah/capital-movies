@@ -17,8 +17,7 @@ function App() {
           <Route path="/" exact element={<Navigate to="/discover" />} />
           <Route path="/login" element={<Login />} />
           <Route path="/discover" element={<Discover />}>
-            <Route index element={<PopularMovies />} />
-            <Route path="popular" element={<PopularMovies />} />
+            <Route index path="popular" element={<PopularMovies />} />
             <Route path="latest" element={<LatestMovies />} />
             {user && <Route path="favourites" element={<FavouriteMovies />} />}
             <Route path="*" element={<PageNotFound />} />

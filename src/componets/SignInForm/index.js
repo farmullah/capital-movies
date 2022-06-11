@@ -1,9 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { MoviesContext } from "../../context/MoviesContext";
 import { errorMessages } from "../../utils/constants";
 import {
-  validateName,
   validatePassword,
   validateUsername,
 } from "../../validations/form-validations";

@@ -15,12 +15,12 @@ export const errorMessages = {
 /**
  * TMDB (The movie database)
  */
-const API_URL = process.env.REACT_APP_TMDB_API_KEY;
+const API_KEY = process.env.REACT_APP_TMDB_API_KEY;
 export const TMDB_IMAGE_PATH = "https://image.tmdb.org/t/p/w500/";
 export const BASE_URL = "https://api.themoviedb.org/3";
-export const CREATE_REQUEST_TOKEN_URL = `${BASE_URL}/authentication/token/new?api_key=${API_URL}`;
-export const DISCOVER_MOVIE_URL = `${BASE_URL}/discover/movie?api_key=${API_URL}`;
-export const FAVOURITE_MOVIE_URL = `${BASE_URL}/movie/top_rated?api_key=${API_URL}`;
-export const POPULAR_MOVIE_URL = `${BASE_URL}/movie/popular?api_key=${API_URL}`;
-export const LATEST_MOVIE_URL = `${BASE_URL}/movie/latest?api_key=${API_URL}&language=en-US`;
-export const AUTHENTICATE_URL = `${BASE_URL}/authentication/token/validate_with_login?api_key=${API_URL}`;
+export const CREATE_REQUEST_TOKEN_URL = `${BASE_URL}/authentication/token/new?api_key=${API_KEY}`;
+export const DISCOVER_MOVIE_URL = `${BASE_URL}/discover/movie?api_key=${API_KEY}`;
+export const FAVOURITE_MOVIE_URL = `${BASE_URL}/movie/top_rated?api_key=${API_KEY}`;
+export const POPULAR_MOVIE_URL = `${BASE_URL}/movie/popular?api_key=${API_KEY}`;
+export const LATEST_MOVIE_URL = `${BASE_URL}/movie/latest?api_key=${API_KEY}&language=en-US`;
+export const AUTHENTICATE_URL = `${BASE_URL}/authentication/token/validate_with_login?api_key=${API_KEY}`;

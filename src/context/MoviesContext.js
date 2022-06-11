@@ -39,13 +39,13 @@ const MoviesContextProvider = ({ children }) => {
     return { error: "Account does not exist" };
   };
 
-  const register = ({ username, password }) => {
+  const register = ({ name, username, password }) => {
     const localUsers = JSON.parse(localStorage.getItem("users")) || [];
     const existingUser = localUsers.find((user) => user.username === username);
     if (existingUser) {
       return { error: "Account already exist" };
     }
-    localUsers.push({ username, password });
+    localUsers.push({ name, username, password });
     localStorage.setItem("users", JSON.stringify(localUsers));
     return { message: "Account created!" };
   };

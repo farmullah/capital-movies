@@ -71,6 +71,7 @@ const SignUpForm = ({ setIsLogin = () => {} }) => {
     e.preventDefault();
     if (isValidated()) {
       const { message, error } = register({
+        name: formData.name,
         username: formData.username,
         password: formData.password,
       });

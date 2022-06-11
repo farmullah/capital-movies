@@ -9,7 +9,7 @@ const Login = () => {
   const [isLogin, setIsLogin] = useState(true);
   const navigate = useNavigate();
 
-  const { login, getUserDetails } = useContext(MoviesContext);
+  const { getUserDetails } = useContext(MoviesContext);
 
   useEffect(() => {
     if (getUserDetails()) {

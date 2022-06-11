@@ -19,7 +19,7 @@ const MoviesContextProvider = ({ children }) => {
   const { pathname } = location;
   const categories = pathname.split("/");
   const movieCategory = categories[categories.length - 1];
-
+  
   //user details
   const getUserDetails = useCallback(() => {
     return JSON.parse(localStorage.getItem("user"));

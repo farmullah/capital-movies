@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import { MoviesContext } from "../context/MoviesContext";
 import "../styles/discover.css";
 
@@ -22,6 +22,7 @@ const defaultTabs = [
 const Discover = () => {
   const { getUserDetails, logout } = useContext(MoviesContext);
   const user = getUserDetails();
+  const navigate = useNavigate()
 
   const [tabs, setTabs] = useState(defaultTabs);
 
@@ -31,11 +32,13 @@ const Discover = () => {
   const path = categories[categories.length - 1];
 
   useEffect(() => {
+    navigate("/discover/popular")
     if (user) {
       setTabs([...defaultTabs, favTab]);
     }
   }, []);
 
+  
   return (
     <div className="discover">
       <section className="navbar">

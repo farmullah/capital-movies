@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: rgb(9, 66, 97);
+  color: #fff;
+  padding: 1.2rem 4rem;
+}
+.tabs {
+  flex-grow: 1;
+  display: flex;
+  list-style: none;
+  margin-left: 3rem;
+}
+
+.tabs li {
+  margin: 0 10px;
+}
+
+.tabs li a {
+  color: #cac6c6;
+  text-decoration: none;
+}
+.tabs li.active a {
+  color: #86c677;
+  border-bottom: 1px solid #86c677;
+}
+
+.signInButton {
+  color: #6fb9fe;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btnLogout {
+  cursor: pointer;
+}
